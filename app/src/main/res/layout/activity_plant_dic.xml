@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="15dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginBottom="5dp"
+    tools:context=".PlantDicActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/AppCompatImage_MainLogo"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:src="@drawable/main_logo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/AppCompatTextView_SearchPlant"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/btn_background"
+        android:drawableStart="@drawable/search_icon"
+        android:gravity="center"
+        android:text="식물을 검색하세요."
+        android:textAlignment="viewStart"
+        android:textSize="15sp"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="@+id/AppCompatImage_MainLogo"
+        app:layout_constraintRight_toRightOf="@id/AppCompatImage_MainLogo"
+        app:layout_constraintTop_toBottomOf="@id/AppCompatImage_MainLogo"
+        tools:ignore="HardcodedText,RtlCompat,TextContrastCheck" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/AppCompatTextView_Plant_Dic_Name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/btn_background2"
+        android:gravity="center"
+        android:text="식물 도감"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/AppCompatTextView_SearchPlant"
+        tools:ignore="HardcodedText" />
+
+    <ListView
+        android:id="@+id/Listview_Plant_Dic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AppCompatTextView_Plant_Dic_Name"
+        app:layout_constraintBottom_toTopOf="@id/Listview_Plant_Dic"
+        tools:ignore="MissingConstraints"
+        tools:listitem="@layout/plant_dic_listview_item"
+        android:scrollbars="vertical"
+        android:scrollbarStyle="insideInset" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Listview_Plant_Dic"
+        app:layout_constraintVertical_bias="1.0">
+
+        <Button
+            android:id="@+id/btn_dicTop"
+            style="@style/blackbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/white"
+            android:gravity="center"
+            android:text="Top"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/btn_dicUp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_dicUp"
+            style="@style/blackbutton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="12dp"
+            android:backgroundTint="@color/white"
+            android:gravity="center"
+            android:text="BACK"
+            app:layout_constraintBottom_toBottomOf="@id/btn_dicTop"
+            app:layout_constraintLeft_toRightOf="@id/btn_dicTop"
+            app:layout_constraintTop_toTopOf="@id/btn_dicTop"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/btn_to_home"
+            style="@style/blackbutton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:backgroundTint="@color/white"
+            android:gravity="center"
+            android:text="HOME"
+            app:layout_constraintBottom_toBottomOf="@id/btn_dicTop"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/btn_dicTop" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

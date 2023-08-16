@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="15dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginBottom="5dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/AppCompatImage_MainLogo"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:src="@drawable/main_logo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/AppCompatTextView_Plant_Ident_Name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/btn_background2"
+        android:gravity="center"
+        android:text="척척박사 식물동정"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/AppCompatImage_MainLogo"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/TextView_a"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/AppCompatTextView_Plant_Ident_Name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/btn_background4"
+        android:text="당신이 찾는 식물은 이것인가요?"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textAllCaps="true"
+        android:textStyle="normal"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/set_text"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/TextView_a"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:text="예시사진"
+        android:textAllCaps="true"
+        android:textStyle="normal"
+        android:gravity="center" />
+
+    <ImageView
+        android:id="@+id/ImageView_Plant_Picture2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/set_text" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ImageView_Plant_Picture2"
+        tools:ignore="MissingConstraints">
+
+        <Button
+            android:id="@+id/btn_yesp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="yes"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/btn_nop"
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/greenbutton"/>
+
+        <Button
+            android:id="@+id/btn_nop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/btn_yesp"
+            app:layout_constraintLeft_toRightOf="@id/btn_yesp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/btn_yesp"
+            style="@style/greenbutton"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

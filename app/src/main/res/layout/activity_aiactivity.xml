@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="15dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginBottom="5dp"
+    tools:context=".AIActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/AppCompatImage_MainLogo"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:src="@drawable/main_logo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/ImageButton_Camera"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/camera_image"
+        android:layout_marginLeft="70dp"
+        app:flow_verticalStyle="packed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/AppCompatImage_MainLogo" />
+
+    <ImageButton
+        android:id="@+id/ImageButton_Album"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginRight="70dp"
+        android:background="@drawable/camera_photo_icon"
+        app:flow_verticalStyle="packed"
+        app:layout_constraintBottom_toBottomOf="@+id/ImageButton_Camera"
+        app:layout_constraintHorizontal_bias="0.983"
+        app:layout_constraintLeft_toRightOf="@+id/ImageButton_Camera"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ImageButton_Camera"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="사진찍기"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/ImageButton_Camera"
+        app:layout_constraintLeft_toLeftOf="@+id/ImageButton_Camera"
+        app:layout_constraintRight_toRightOf="@+id/ImageButton_Camera" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="앨범에서 선택"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/ImageButton_Album"
+        app:layout_constraintLeft_toLeftOf="@+id/ImageButton_Album"
+        app:layout_constraintRight_toRightOf="@+id/ImageButton_Album" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
